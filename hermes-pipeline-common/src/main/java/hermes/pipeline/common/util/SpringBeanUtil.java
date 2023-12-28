@@ -1,4 +1,4 @@
-package hermes.pipeline.service.domain.util;
+package hermes.pipeline.common.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

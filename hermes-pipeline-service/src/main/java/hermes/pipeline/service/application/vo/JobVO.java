@@ -1,4 +1,4 @@
-package hermes.pipeline.service.command.vo;
+package hermes.pipeline.service.application.vo;
 
 import lombok.Data;
 

@@ -1,12 +1,12 @@
-package hermes.pipeline.scheduler.domain.event.policy.plugins.impl;
+package hermes.pipeline.scheduler.domain.core.policy.plugins.impl;
 
 import hermes.pipeline.scheduler.domain.entity.JobTask;
-import hermes.pipeline.scheduler.domain.event.policy.plugins.Executable;
+import hermes.pipeline.scheduler.domain.core.policy.plugins.PluginsExecutable;
 
 /**
  * @author 7Achilles
  **/
-public abstract class BasePlugin implements Executable {
+public abstract class BasePlugin implements PluginsExecutable {
 
     @Override
     public void doExecute(JobTask jobTask) {

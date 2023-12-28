@@ -1,9 +1,9 @@
-package hermes.pipeline.scheduler.domain.event.policy.plugins;
+package hermes.pipeline.scheduler.domain.core.policy.plugins;
 
 
 import hermes.pipeline.common.valueObject.PipelineTaskJobType;
-import hermes.pipeline.scheduler.domain.event.policy.plugins.impl.BasePlugin;
-import hermes.pipeline.scheduler.domain.event.policy.plugins.impl.DockerBuildPlugin;
+import hermes.pipeline.scheduler.domain.core.policy.plugins.impl.BasePlugin;
+import hermes.pipeline.scheduler.domain.core.policy.plugins.impl.DockerBuildPlugin;
 
 import java.util.Map;
 import java.util.Optional;

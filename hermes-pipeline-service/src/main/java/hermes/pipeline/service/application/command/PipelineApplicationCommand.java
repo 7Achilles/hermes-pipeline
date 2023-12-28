@@ -1,6 +1,7 @@
-package hermes.pipeline.service.command;
+package hermes.pipeline.service.application.command;
 
-import hermes.pipeline.service.command.vo.PipelineVO;
+import hermes.pipeline.service.application.qo.PipelineQO;
+import hermes.pipeline.service.application.vo.PipelineVO;
 
 /**
  * @author 7Achilles
@@ -11,8 +12,6 @@ import hermes.pipeline.service.command.vo.PipelineVO;
  **/
 public interface PipelineApplicationCommand {
 
-    Long createPipeline(PipelineVO vo);
-
-    Long executePipeline(PipelineVO vo);
+    Long executePipeline(PipelineQO qo);
 
 }

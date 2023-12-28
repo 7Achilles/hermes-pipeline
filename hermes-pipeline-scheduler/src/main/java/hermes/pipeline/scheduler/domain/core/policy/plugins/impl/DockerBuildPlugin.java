@@ -1,4 +1,4 @@
-package hermes.pipeline.scheduler.domain.event.policy.plugins.impl;
+package hermes.pipeline.scheduler.domain.core.policy.plugins.impl;
 
 import hermes.pipeline.scheduler.domain.entity.JobTask;
 

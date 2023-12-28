@@ -1,11 +1,15 @@
 package hermes.pipeline.scheduler.domain.entity;
 
+import lombok.Data;
+
 /**
- * @className MavenBuildJobTask 
- * @description  
- * @author 7Achilles 
- * @date 2023/11/28 14:45 
- * @version V1.17.0 
-**/
-public class MavenBuildJobTask {
+ * @author 7Achilles
+ **/
+@Data
+public class MavenBuildJobTask extends JobTask{
+
+
+
+
+
 }

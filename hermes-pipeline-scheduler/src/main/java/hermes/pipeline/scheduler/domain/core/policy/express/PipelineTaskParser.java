@@ -1,4 +1,4 @@
-package hermes.pipeline.scheduler.domain.event.policy.express;
+package hermes.pipeline.scheduler.domain.core.policy.express;
 
 /**
  * @author 7Achilles

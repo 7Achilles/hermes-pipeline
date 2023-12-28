@@ -1,6 +1,6 @@
-package hermes.pipeline.service.domain.dto;
+package hermes.pipeline.common.dto;
 
-import hermes.pipeline.service.domain.valueObject.PipelineTaskStatusEnum;
+import hermes.pipeline.common.valueObject.PipelineTaskStatusEnum;
 import lombok.Data;
 
 /**

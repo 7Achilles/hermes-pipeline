@@ -1,11 +1,10 @@
-package hermes.pipeline.scheduler.application.command.mq;
+package hermes.pipeline.scheduler.application.command;
 
 /**
- * @className PipelineTaskService 
- * @description  
- * @author 7Achilles 
- * @date 2023/11/27 13:20 
- * @version V1.17.0 
-**/
-public class PipelineTaskService {
+ * @author 7Achilles
+ **/
+public interface PipelineTaskService {
+
+    void schedule(String spec);
+
 }

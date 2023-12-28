@@ -1,4 +1,6 @@
-package hermes.pipeline.service.domain.resposity;
+package hermes.pipeline.service.domain.repository;
+
+import hermes.pipeline.service.domain.aggregate.Pipeline;
 
 /**
  * @author 7Achilles
@@ -7,5 +9,10 @@ package hermes.pipeline.service.domain.resposity;
  * @description
  * @date 2023/11/17 16:39
  **/
-public interface PipelineResposity {
+public interface PipelineRepository {
+
+    Long save(Pipeline pipeline);
+
+    Pipeline queryById(Long id);
+
 }

@@ -1,15 +1,17 @@
-package hermes.pipeline.service.domain;
+package hermes.pipeline.service.domain.entity;
+
+import hermes.pipeline.common.valueObject.PipelineTaskJobType;
+import lombok.Data;
 
 /**
  * @author 7Achilles
- * @version V1.17.0
- * @className Job
- * @description
- * @date 2023/11/17 16:02
  **/
+@Data
 public class Job {
 
     private Long id;
+
+    private PipelineTaskJobType type;
 
 
 

@@ -1,11 +1,16 @@
 package hermes.pipeline.service.domain.event.policy;
 
+
+
+import hermes.pipeline.common.dto.PipelineTaskDTO;
+
+import java.util.Map;
+
 /**
- * @interfaceName PipelineTaskEventExecutor 
- * @description  
- * @author 7Achilles 
- * @date 2023/11/20 13:21 
- * @version V1.17.0 
-**/
+ * @author 7Achilles
+ **/
 public interface PipelineTaskEventExecutor {
+
+    void execute(PipelineTaskDTO dto, Map<String, Object> param);
+
 }

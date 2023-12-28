@@ -1,8 +1,8 @@
-package hermes.pipeline.scheduler.domain.event.policy.schedule.impl;
+package hermes.pipeline.scheduler.domain.core.policy.schedule.impl;
 
 import hermes.pipeline.scheduler.domain.aggregate.PipelineTask;
 import hermes.pipeline.scheduler.domain.aggregate.StageTask;
-import hermes.pipeline.scheduler.domain.event.policy.schedule.PipelineTaskExecutor;
+import hermes.pipeline.scheduler.domain.core.policy.schedule.PipelineTaskExecutable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,7 +14,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  * @author 7Achilles
  **/
 @Service
-public class DefaultPipelineTaskExecutor implements PipelineTaskExecutor {
+public class DefaultPipelineTaskExecutor implements PipelineTaskExecutable {
 
     @Resource
     private ThreadPoolExecutor defaultThreadPool;
@@ -31,7 +31,7 @@ public class DefaultPipelineTaskExecutor implements PipelineTaskExecutor {
 
         for (StageTask stageTask : stages) {
             completableFuture = completableFuture.thenApply(t -> {
-                stageTask.execute(defaultThreadPool);
+                stageTask.execute();
                 return t;
             });
         }

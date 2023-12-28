@@ -1,18 +1,14 @@
-package hermes.pipeline.service.factory;
+package hermes.pipeline.service.domain.factory;
 
-import hermes.pipeline.service.domain.Pipeline;
-import hermes.pipeline.service.vo.PipelineVO;
+import hermes.pipeline.service.domain.aggregate.Pipeline;
+import hermes.pipeline.service.domain.dto.PipelineDTO;
 
 /**
  * @author 7Achilles
- * @version V1.17.0
- * @className PipelineFactory
- * @description
- * @date 2023/11/17 16:15
  **/
 public class PipelineFactory {
 
-    public static Pipeline create(PipelineVO vo){
+    public static Pipeline create(PipelineDTO dto){
 
         Pipeline pipeline = new Pipeline();
         // transform

@@ -1,11 +1,19 @@
 package hermes.pipeline.service.domain.valueObject;
 
+import lombok.Data;
+
 /**
- * @className MavenBuildMetaInfo 
- * @description  
- * @author 7Achilles 
- * @date 2023/11/29 10:48 
- * @version V1.17.0 
-**/
+ * @author 7Achilles
+ **/
+@Data
 public class MavenBuildMetaInfo {
+
+    private String sourcePath;
+
+    private String spec;
+
+    private String name;
+
+    private String version;
+
 }

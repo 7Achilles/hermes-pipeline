@@ -1,11 +1,22 @@
 package hermes.pipeline.service.domain.factory;
 
+import hermes.pipeline.service.domain.aggregate.Pipeline;
+import hermes.pipeline.service.domain.entity.PipelineTask;
+import hermes.pipeline.service.domain.entity.Stage;
+
 /**
- * @className PipelineTaskFactory 
- * @description  
- * @author 7Achilles 
- * @date 2023/11/17 17:00 
- * @version V1.17.0 
-**/
+ * @author 7Achilles
+ * buid pipeline task by pipeline
+ **/
 public class PipelineTaskFactory {
+
+    public static PipelineTask create(Pipeline pipeline) {
+        PipelineTask pipelineTask = new PipelineTask();
+        pipelineTask.setPipelineId(pipeline.getId());
+        pipelineTask.setRoot(pipeline.getRoot());
+        return pipelineTask;
+    }
+
+
+
 }

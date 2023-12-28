@@ -1,11 +1,13 @@
 package hermes.pipeline.service.application.service;
 
+import hermes.pipeline.service.application.qo.PipelineQO;
+import hermes.pipeline.service.application.vo.PipelineVO;
+
 /**
- * @interfaceName PipelineApplicationService 
- * @description  
- * @author 7Achilles 
- * @date 2023/11/20 10:55 
- * @version V1.17.0 
-**/
+ * @author 7Achilles
+ **/
 public interface PipelineApplicationService {
+
+    PipelineVO queryById(PipelineQO vo);
+
 }

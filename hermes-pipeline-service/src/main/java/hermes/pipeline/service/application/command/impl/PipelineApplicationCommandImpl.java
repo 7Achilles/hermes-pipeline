@@ -1,33 +1,30 @@
-package hermes.pipeline.service.command.impl;
+package hermes.pipeline.service.application.command.impl;
 
+
+import hermes.pipeline.service.application.command.PipelineApplicationCommand;
+import hermes.pipeline.service.application.qo.PipelineQO;
 import hermes.pipeline.service.domain.aggregate.Pipeline;
+import hermes.pipeline.service.domain.dto.PipelineDTO;
+import org.springframework.transaction.annotation.Transactional;
 import hermes.pipeline.service.domain.factory.PipelineFactory;
-import hermes.pipeline.service.domain.repository.PipelineRepository;
-import hermes.pipeline.service.command.vo.PipelineVO;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
+import java.io.IOException;
+
 
 /**
  * @author 7Achilles
  **/
 @Service
-public class PipelineApplicationCommandImpl implements hermes.pipeline.service.command.PipelineApplicationCommand {
+public class PipelineApplicationCommandImpl implements PipelineApplicationCommand {
 
-    @Resource
-    private PipelineRepository pipelineRepository;
-
+    @Transactional
     @Override
-    public Long createPipeline(PipelineVO vo) {
-        Pipeline pipeline = PipelineFactory.create(vo);
-        return pipeline.save();
-    }
+    public Long executePipeline(PipelineQO qo) {
 
-    @Override
-    public Long executePipeline(PipelineVO vo) {
-
-        Pipeline pipeline = pipelineRepository.queryById(vo.getId());
+        Pipeline pipeline = new Pipeline();
         return pipeline.execute();
 
     }
+
 }

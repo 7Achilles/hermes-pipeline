@@ -1,11 +1,7 @@
-package hermes.pipeline.service.domain.valueObject;
+package hermes.pipeline.common.valueObject;
 
 /**
  * @author 7Achilles
- * @version V1.17.0
- * @className PipelineTaskEnum
- * @description
- * @date 2023/11/17 17:04
  **/
 public enum PipelineTaskStatusEnum {
 

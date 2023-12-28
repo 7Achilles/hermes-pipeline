@@ -1,11 +1,13 @@
 package hermes.pipeline.service.application.qo;
 
+import lombok.Data;
+
 /**
- * @className PipelineQO 
- * @description  
- * @author 7Achilles 
- * @date 2023/11/20 10:59 
- * @version V1.17.0 
-**/
+ * @author 7Achilles
+ **/
+@Data
 public class PipelineQO {
+
+    private Long id;
+
 }

@@ -1,11 +1,18 @@
 package hermes.pipeline.service;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
- * @className HermesPipelineServiceApplication 
- * @description  
- * @author 7Achilles 
- * @date 2023/11/20 16:27 
- * @version V1.17.0 
-**/
+ * @author 7Achilles
+ **/
+@SpringBootApplication
 public class HermesPipelineServiceApplication {
+
+
+    public static void main(String[] args) {
+        SpringApplication.run(HermesPipelineServiceApplication.class, args);
+    }
+
+
 }

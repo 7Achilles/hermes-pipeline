@@ -1,11 +1,17 @@
 package hermes.pipeline.scheduler;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
- * @className HermesPipelineSchedulerApplication 
- * @description  
- * @author 7Achilles 
- * @date 2023/11/20 16:38 
- * @version V1.17.0 
-**/
+ * @author 7Achilles
+ **/
+@SpringBootApplication
 public class HermesPipelineSchedulerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(HermesPipelineSchedulerApplication.class, args);
+    }
+
+
 }

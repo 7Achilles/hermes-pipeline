@@ -1,11 +1,14 @@
 package hermes.pipeline.service.domain.entity;
 
+import hermes.pipeline.service.domain.valueObject.MavenBuildMetaInfo;
+import lombok.Data;
+
 /**
- * @className MavenJob 
- * @description  
- * @author 7Achilles 
- * @date 2023/11/29 10:41 
- * @version V1.17.0 
-**/
-public class MavenJob {
+ * @author 7Achilles
+ **/
+@Data
+public class MavenBuildJob extends Job{
+
+    private MavenBuildMetaInfo mavenBuildMetaInfo;
+
 }

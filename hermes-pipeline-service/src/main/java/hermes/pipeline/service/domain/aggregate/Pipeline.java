@@ -1,16 +1,17 @@
-package hermes.pipeline.service.domain;
+package hermes.pipeline.service.domain.aggregate;
 
+import hermes.pipeline.common.util.SpringBeanUtil;
+import hermes.pipeline.service.domain.entity.PipelineTask;
+import hermes.pipeline.service.domain.entity.Stage;
+import hermes.pipeline.service.domain.event.PipelineTaskEvent;
+import hermes.pipeline.service.domain.event.publisher.PipelineTaskPublisher;
+import hermes.pipeline.service.domain.factory.PipelineTaskFactory;
 import hermes.pipeline.service.domain.repository.PipelineRepository;
 import lombok.Data;
 
 /**
  * @author 7Achilles
- * @version V1.17.0
- * @className Pipeline
- * @description
- * @date 2023/11/17 15:44
  **/
-
 @Data
 public class Pipeline {
 
@@ -18,7 +19,7 @@ public class Pipeline {
 
     private Stage root;
 
-    public Long save(){
+    public Long save() {
 
         // bean
         PipelineRepository pipelineRepository = null;
@@ -26,15 +27,28 @@ public class Pipeline {
         return pipelineRepository.save(this);
     }
 
-    public Long execute(){
+    public Long execute() {
 
-        // check
+        PipelineTask pipelineTask = PipelineTaskFactory.create(this);
 
-        // write record into mysql
+        Long taskId = pipelineTask.save();
 
+        publishEvent();
+
+        return taskId;
 
     }
 
+    private void publishEvent() {
+
+        PipelineTaskPublisher<PipelineTaskEvent> publisher = SpringBeanUtil.getBean(PipelineTaskPublisher.class);
+
+        PipelineTaskEvent event = new PipelineTaskEvent();
+
+        publisher.syncPublish();
+
+
+    }
 
 
 }

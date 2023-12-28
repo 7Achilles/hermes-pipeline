@@ -5,7 +5,7 @@ import hermes.pipeline.scheduler.domain.aggregate.PipelineTask;
 /**
  * @author 7Achilles
  **/
-public interface PipelineTaskExecutor {
+public interface PipelineTaskExecutable {
 
     void execute(PipelineTask task);
 

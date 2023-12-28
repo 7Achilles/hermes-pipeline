@@ -1,11 +1,13 @@
 package hermes.pipeline.service.domain.dto;
 
+import lombok.Data;
+
 /**
- * @className PipelineDTO 
- * @description  
- * @author 7Achilles 
- * @date 2023/11/20 11:03 
- * @version V1.17.0 
-**/
+ * @author 7Achilles
+ **/
+@Data
 public class PipelineDTO {
+
+
+
 }
